@@ -1,0 +1,151 @@
+body {
+	background: url(12_col.gif) center top repeat-y;
+	background-size: 100%;
+}
+
+.container *
+   {
+	border: 1px solid black;
+	text-align: start;
+	font-size: 30px;
+	height: 150px;
+        margin:5px;
+	
+  }
+
+
+  .header{
+          grid-area:header;
+  }
+  .box1{
+          grid-area:box1;
+  }
+  .box2{
+          grid-area:box2;
+  }
+  .box3{
+          grid-area:box3;
+  }
+  .content{
+          grid-area:content;
+  }
+  .sidebar{
+          grid-area:sidebar;
+  }
+  .footer-container{
+          grid-area:footer;
+  }
+
+  .section1{
+          grid-area:footersection1;
+  }
+  .section2{
+          grid-area:footersection2;
+  }
+  .section3{
+          grid-area:footersection3;
+  }
+  .section4{
+          grid-area:footersection4;
+  }
+
+  .container,
+  .footer-container
+  {
+        
+         display: grid;
+         grid-gap: 10px;
+         padding-right: 10px;
+         
+         grid-template-columns: repeat(12, 1fr);
+         grid-template-rows: auto;
+         grid-gap:2px;
+        
+   }
+ 
+
+
+   @media screen and (min-width:1200px){
+
+        .container
+        {
+                grid-template-areas:
+                "header header header header header header header header header header header header"
+                "box1 box1 box2 box2 box2 box2 box2 box2 box2 box2 box3 box3"
+                "content content content content content content content content content sidebar sidebar sidebar"
+                "footer footer footer footer footer footer footer footer footer footer footer footer";
+        }
+ 
+        .footer-container{
+
+                grid-template-areas:
+                "footersection1 footersection1 footersection1 footersection2 footersection2 footersection2 footersection3 footersection3 footersection3 footersection4 footersection4 footersection4"
+        }
+
+   }
+
+   @media screen and (min-width:960px) and (max-width:1200px){
+        
+        .container
+        {
+                
+                grid-template-areas:
+                "header header header header header header header header header header header header"
+                "box1 box1 box1 box2 box2 box2 box2 box2 box2 box3 box3 box3"
+                "content content content content content content content content sidebar sidebar sidebar sidebar"
+                "footer footer footer footer footer footer footer footer footer footer footer footer";
+        }
+ 
+        .footer-container{
+                
+                grid-template-areas:
+                "footersection1 footersection1 footersection1 footersection2 footersection2 footersection2 footersection3 footersection3 footersection3 footersection4 footersection4 footersection4"
+        }
+   
+   }
+
+   @media screen and (min-width:768px) and (max-width:960px) {
+
+        .container
+        {
+                grid-template-areas:
+                "header header header header header header header header header header header header"
+                "box1 box1 box1 box1 box2 box2 box2 box2 box3 box3 box3 box3"
+                "content content content content content content sidebar sidebar sidebar sidebar sidebar sidebar"
+                "footer footer footer footer footer footer footer footer footer footer footer footer";
+        }
+ 
+        .footer-container{
+                
+                grid-template-areas:
+                "footersection1 footersection1 footersection1 footersection1 footersection1 footersection1 footersection2 footersection2 footersection2 footersection2 footersection2 footersection2"
+                "footersection3 footersection3 footersection3 footersection3 footersection3 footersection3 footersection4 footersection4 footersection4 footersection4 footersection4 footersection4 "
+        }
+   
+   }
+
+   @media screen and (max-width:768px){
+        .container
+        {
+                grid-template-areas:
+                "header header header header header header header header header header header header"
+                "box1 box1 box1 box1 box1 box1 box1 box1 box1 box1 box1 box1"
+                "box2 box2 box2 box2 box2 box2 box2 box2 box2 box2 box2 box2"
+                "box3 box3 box3 box3 box3 box3 box3 box3 box3 box3 box3 box3"
+                "content content content content content content content content content content content content"
+                "sidebar sidebar sidebar sidebar sidebar sidebar sidebar sidebar sidebar sidebar sidebar sidebar"
+                "footer footer footer footer footer footer footer footer footer footer footer footer";
+        }
+ 
+        .footer-container{
+                
+                grid-template-areas:
+                "footersection1 footersection1 footersection1 footersection1 footersection1 footersection1 footersection1 footersection1 footersection1 footersection1 footersection1 footersection1" 
+                "footersection2 footersection2 footersection2 footersection2 footersection2 footersection2 footersection2 footersection2 footersection2 footersection2 footersection2 footersection2"
+                "footersection3 footersection3 footersection3 footersection3 footersection3 footersection3 footersection3 footersection3 footersection3 footersection3 footersection3 footersection3"
+                "footersection4 footersection4 footersection4 footersection4 footersection4 footersection4 footersection4 footersection4 footersection4 footersection4 footersection4 footersection4 "
+        }
+   
+   }
+
+   }
